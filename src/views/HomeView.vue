@@ -1,28 +1,48 @@
+<script setup>
+import { ref } from "vue";
+import LayoutView from "@/layout/LayoutView.vue";
+import HabilidadView from "@/components/HabilidadView..vue";
+import ProyectoView from "@/components/ProyectoView.vue";
+import IconoView from "@/components/IconoView.vue";
+import FooterView from "@/footer/FooterView.vue";
+
+// Estado para controlar el aviso de copiado
+const copied = ref(false);
+
+// Función para copiar el correo al portapapeles
+const copyToClipboard = () => {
+  const correo = document.getElementById("correo").textContent;
+
+  navigator.clipboard
+    .writeText(correo)
+    .then(() => {
+      // Mostrar el aviso cuando el correo es copiado
+      copied.value = true;
+
+      // Desaparecer el aviso después de 2 segundos
+      setTimeout(() => {
+        copied.value = false;
+      }, 2000);
+    })
+    .catch((error) => {
+      console.error("Error al copiar el correo: ", error);
+    });
+};
+</script>
+
 <template>
   <div class="bg-gray-900 text-white min-h-screen">
     <!-- Cabecera -->
-    <header class="py-8 px-8 border-b border-gray-700">
-      <div class="max-w-7xl mx-auto flex items-center justify-between">
-        <h1 class="text-4xl font-bold text-teal-400 tracking-wider">Fernando Orellana</h1>
-        <nav class="space-x-8 text-lg">
-          <a href="#proyectos" class="hover:text-teal-300 transition-colors">Proyectos</a>
-          <a href="#habilidades" class="hover:text-teal-300 transition-colors"
-            >Habilidades</a
-          >
-          <a href="#contacto" class="hover:text-teal-300 transition-colors">Contacto</a>
-        </nav>
-      </div>
-    </header>
-
+    <LayoutView/>
     <!-- Sección Principal -->
     <section class="py-20 text-center">
       <div class="max-w-2xl mx-auto">
-        <h2 class="text-5xl font-extrabold text-teal-400 mb-4">¡Hola! Soy Fer</h2>
-        <p class="text-xl text-gray-300 leading-relaxed mb-8">
-          Programador web graduado en la Tecnicatura Universitaria en Programación. Cuento
-          con experiencia en proyectos académicos y propios, mi objetivo es seguir creciendo 
-          como desarrollador full-stack, y estoy buscando nuevos desafíos y oportunidades para 
-          colaborar en proyectos innovadores.
+        <h2 class="text-5xl font-extrabold text-teal-400 mb-4">¡Hola! Soy Fernando</h2>
+        <p class="text-xl text-gray-300 leading-relaxed m-8">
+          Soy programador web apasionado por el backend, me gusta la lógica detrás de las
+          aplicaciones web y la optimización de procesos. Mi enfoque está en construir
+          sistemas eficientes, escalables y seguros, mi objetivo es seguir creciendo como
+          desarrollador full-stack.
         </p>
         <a
           href="#proyectos"
@@ -37,85 +57,46 @@
       <div class="max-w-7xl mx-auto text-center">
         <h2 class="text-3xl font-bold text-teal-400 mb-12">Habilidades</h2>
         <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-12">
-          <div class="text-center">
-            <img
-              src="https://img.icons8.com/ios/50/ffffff/vuejs.png"
-              alt="Vue.js"
-              class="mx-auto mb-4 w-16 h-16"
-            />
-            <p class="text-lg text-gray-300">Vue.js</p>
-          </div>
-          <div class="text-center">
-            <img
-              src="https://img.icons8.com/ios/50/ffffff/php.png"
-              alt="PHP"
-              class="mx-auto mb-4 w-16 h-16"
-            />
-            <p class="text-lg text-gray-300">PHP</p>
-          </div>
-          <div class="text-center">
-            <img
-              src="https://img.icons8.com/ios/50/ffffff/mysql.png"
-              alt="MySQL"
-              class="mx-auto mb-4 w-16 h-16"
-            />
-            <p class="text-lg text-gray-300">MySQL</p>
-          </div>
-          <div class="text-center">
-            <img
-              src="https://img.icons8.com/ios/50/ffffff/laravel.png"
-              alt="Laravel"
-              class="mx-auto mb-4 w-16 h-16"
-            />
-            <p class="text-lg text-gray-300">Laravel</p>
-          </div>
-          <div class="text-center">
-            <img
-              src="https://img.icons8.com/ios/50/ffffff/javascript.png"
-              alt="JavaScript"
-              class="mx-auto mb-4 w-16 h-16"
-            />
-            <p class="text-lg text-gray-300">JavaScript</p>
-          </div>
+
+          <HabilidadView name="HTML" src="https://img.icons8.com/ios/50/ffffff/html-5--v1.png"/>
+
+          <HabilidadView name="CSS" src="https://img.icons8.com/ios/50/ffffff/css3.png"/>
+
+          <HabilidadView name="JavaScript" src="https://img.icons8.com/ios/50/ffffff/javascript.png"/>
+          
+          <HabilidadView name="PHP" src="https://img.icons8.com/ios/50/ffffff/php.png"/>
+         
+          <HabilidadView name="MySQL" src="https://img.icons8.com/ios/50/ffffff/mysql.png"/>
+        
+          <HabilidadView name="Vue.js" src="https://img.icons8.com/ios/50/ffffff/vuejs.png"/>
+          
+          <HabilidadView name="Laravel" src="https://img.icons8.com/ios/50/ffffff/laravel.png" />
+
+          <HabilidadView name="Git" src="https://img.icons8.com/ios/50/ffffff/git.png" />
+          
         </div>
       </div>
     </section>
 
     <!-- Sección de Proyectos -->
+
     <section id="proyectos" class="py-20">
       <div class="max-w-7xl mx-auto text-center">
         <h2 class="text-3xl font-bold text-teal-400 mb-12">Proyectos Destacados</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
-          <!-- Proyecto 1 -->
-          <div
-            class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow"
+       
+          <!-- Repite más bloques de proyectos como sea necesario -->
+          <ProyectoView image="" name="Proyecto 1" text="proyecto 1 por asdbajhsd sahdbahsbdasd asd" href=""/>
+        </div>
+
+        <!-- Botón para Ver Todos los Proyectos -->
+        <div class="mt-12">
+          <a
+            href="#todos-proyectos"
+            class="inline-block px-6 py-3 text-lg font-medium text-teal-400 border border-teal-400 rounded-lg hover:bg-teal-400 hover:text-gray-900 transition-colors"
           >
-            <h3 class="text-2xl font-bold text-teal-300 mb-4">Proyecto 1</h3>
-            <p class="text-gray-300 mb-4">
-              Descripción breve del proyecto, destacando las tecnologías utilizadas.
-            </p>
-            <a href="#" class="text-teal-400 hover:text-teal-300">Ver más</a>
-          </div>
-          <!-- Proyecto 2 -->
-          <div
-            class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow"
-          >
-            <h3 class="text-2xl font-bold text-teal-300 mb-4">Proyecto 2</h3>
-            <p class="text-gray-300 mb-4">
-              Descripción breve del proyecto, destacando las tecnologías utilizadas.
-            </p>
-            <a href="#" class="text-teal-400 hover:text-teal-300">Ver más</a>
-          </div>
-          <!-- Proyecto 3 -->
-          <div
-            class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow"
-          >
-            <h3 class="text-2xl font-bold text-teal-300 mb-4">Proyecto 3</h3>
-            <p class="text-gray-300 mb-4">
-              Descripción breve del proyecto, destacando las tecnologías utilizadas.
-            </p>
-            <a href="#" class="text-teal-400 hover:text-teal-300">Ver más</a>
-          </div>
+            Ver todos los proyectos
+          </a>
         </div>
       </div>
     </section>
@@ -127,33 +108,64 @@
         <p class="text-lg text-gray-300 mb-8">
           Si tienes alguna consulta o deseas trabajar conmigo, no dudes en contactarme.
         </p>
-        <a
-          href="mailto:tuemail@example.com"
-          class="text-teal-400 hover:text-teal-300 text-lg font-medium transition-colors"
-          >Enviar un correo</a
+        <div class="flex justify-center items-center space-x-8 mb-8">
+          <!-- Icono GitHub -->
+          <IconoView name="GitHub" src="https://img.icons8.com/ios-filled/50/ffffff/github.png" href="https://github.com/FernandoAriel80"/>
+
+          <!-- Icono LinkedIn -->
+          <IconoView name="LinkedIn" src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" href="https://www.linkedin.com/in/fernando-ariel-orellana-601ba7300/"/>
+          
+          <!-- Icono Descargar CV -->
+          <a
+            href="../../public/CV Orellana Fernando Ariel.pdf"
+            download="CV Orellana Fernando Ariel.pdf"
+            class="relative text-gray-300 hover:text-teal-400 transition-colors group"
+          >
+            <img
+              src="https://img.icons8.com/?size=100&id=39372&format=png&color=FFFFFF"
+              alt="Descargar CV"
+              class="w-12 h-12"
+            />
+            <!-- Tooltip -->
+            <span
+              class="absolute bottom-16 left-1/2 transform -translate-x-1/2 text-sm bg-teal-500 text-white py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            >
+              Curriculum
+            </span>
+          </a>
+        </div>
+        <!-- Correo en texto -->
+
+        <p class="text-lg text-gray-300">
+          Correo:
+          <span class="font-medium text-teal-400" id="correo"
+            >fernando_ariel1995@hotmail.com</span
+          >
+          <!-- Icono de copiar -->
+          <button @click="copyToClipboard" class="ml-2 text-teal-400 hover:text-teal-600">
+            <i class="fas fa-copy text-white w-6 h-6"></i>
+            <!-- Ícono de copiar -->
+          </button>
+        </p>
+
+        <!-- Aviso de éxito al copiar -->
+        <div
+          v-if="copied"
+          class="fixed bottom-4 right-4 bg-teal-500 text-white p-2 rounded shadow"
         >
+          ¡Correo copiado al portapapeles!
+        </div>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 py-8">
-      <div class="max-w-7xl mx-auto text-center text-gray-400">
-        <p>&copy; 2025 Tu Nombre. Todos los derechos reservados.</p>
-        <p>
-          <a href="https://github.com/tunombre" class="hover:text-teal-400">GitHub</a> |
-          <a href="mailto:tuemail@example.com" class="hover:text-teal-400">Correo</a>
-        </p>
-      </div>
-    </footer>
+    <FooterView/>
   </div>
 </template>
 
-<script>
-export default {
-  name: "App",
-};
-</script>
-
 <style scoped>
-/* Agregar aquí más personalización si es necesario */
+/* Asegúrate de que el ícono sea visible y esté centrado */
+.fas {
+  font-size: 1.25rem;
+}
 </style>
