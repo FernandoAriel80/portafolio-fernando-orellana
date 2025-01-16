@@ -1,33 +1,31 @@
 <script setup>
-import { ref } from "vue";
+
 import LayoutView from "@/layout/LayoutView.vue";
 import HabilidadView from "@/components/HabilidadView..vue";
-import ProyectoView from "@/components/ProyectoView.vue";
-import IconoView from "@/components/IconoView.vue";
-import FooterView from "@/footer/FooterView.vue";
+import ProyectPreView from "@/components/ProyectPreView.vue";
 
-// Estado para controlar el aviso de copiado
-const copied = ref(false);
-
-// Función para copiar el correo al portapapeles
-const copyToClipboard = () => {
-  const correo = document.getElementById("correo").textContent;
-
-  navigator.clipboard
-    .writeText(correo)
-    .then(() => {
-      // Mostrar el aviso cuando el correo es copiado
-      copied.value = true;
-
-      // Desaparecer el aviso después de 2 segundos
-      setTimeout(() => {
-        copied.value = false;
-      }, 2000);
-    })
-    .catch((error) => {
-      console.error("Error al copiar el correo: ", error);
-    });
-};
+const tecnologiesDistributor = [
+  {
+    name: "HTML",
+    src: "https://img.icons8.com/ios/50/ffffff/html-5--v1.png",
+  },
+  {
+    name: "Tailwind",
+    src: "https://img.icons8.com/?size=100&id=qOFWMoaAQIdR&format=png&color=FFFFFF",
+  },
+  {
+    name: "Vue.js",
+    src: "https://img.icons8.com/ios/50/ffffff/vuejs.png",
+  },
+  {
+    name: "Laravel",
+    src: "https://img.icons8.com/ios/50/ffffff/laravel.png",
+  },
+  {
+    name: "MySql",
+    src: "https://img.icons8.com/?size=100&id=39855&format=png&color=FFFFFF",
+  },
+];
 </script>
 
 <template>
@@ -64,29 +62,42 @@ const copyToClipboard = () => {
 
           <HabilidadView name="JavaScript" src="https://img.icons8.com/ios/50/ffffff/javascript.png"/>
           
-          <HabilidadView name="PHP" src="https://img.icons8.com/ios/50/ffffff/php.png"/>
+          <HabilidadView name="PHP" src="https://img.icons8.com/?size=100&id=39852&format=png&color=FFFFFF"/>
+
+          <HabilidadView name="SQL" src="https://img.icons8.com/?size=100&id=77694&format=png&color=FFFFFF"/>
          
-          <HabilidadView name="MySQL" src="https://img.icons8.com/ios/50/ffffff/mysql.png"/>
+          <HabilidadView name="MySQL" src="https://img.icons8.com/?size=100&id=39855&format=png&color=FFFFFF"/>
+
+          <HabilidadView name="Tailwind" src="https://img.icons8.com/?size=100&id=qOFWMoaAQIdR&format=png&color=FFFFFF"/>
         
           <HabilidadView name="Vue.js" src="https://img.icons8.com/ios/50/ffffff/vuejs.png"/>
           
           <HabilidadView name="Laravel" src="https://img.icons8.com/ios/50/ffffff/laravel.png" />
 
           <HabilidadView name="Git" src="https://img.icons8.com/ios/50/ffffff/git.png" />
+
+          <HabilidadView name="Visual Studio Code" src="https://img.icons8.com/?size=100&id=121601&format=png&color=FFFFFF" />
           
         </div>
       </div>
     </section>
 
     <!-- Sección de Proyectos -->
-
     <section id="proyectos" class="py-20">
       <div class="max-w-7xl mx-auto text-center">
         <h2 class="text-3xl font-bold text-teal-400 mb-12">Proyectos Destacados</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
        
           <!-- Repite más bloques de proyectos como sea necesario -->
-          <ProyectoView image="" name="Proyecto 1" text="proyecto 1 por asdbajhsd sahdbahsbdasd asd" href=""/>
+          <ProyectPreView 
+            image="/src/assets/images/distribuidora/inicio.png" 
+            name="La Viejita" 
+            text="Distribuidora de alimentos, mayorista y minorista, carrito, hacer pedidos. 
+            Lado administrativo, carga de productos, empleados, seguimiento de empleados 
+            y estadística mensual." 
+            href="/proyecto-destribuidora"
+            :technologies="tecnologiesDistributor"
+          />
         </div>
 
         <!-- Botón para Ver Todos los Proyectos -->
@@ -100,66 +111,6 @@ const copyToClipboard = () => {
         </div>
       </div>
     </section>
-
-    <!-- Sección de Contacto -->
-    <section id="contacto" class="py-16 bg-gray-800">
-      <div class="max-w-7xl mx-auto text-center">
-        <h2 class="text-3xl font-bold text-teal-400 mb-8">Contacto</h2>
-        <p class="text-lg text-gray-300 mb-8">
-          Si tienes alguna consulta o deseas trabajar conmigo, no dudes en contactarme.
-        </p>
-        <div class="flex justify-center items-center space-x-8 mb-8">
-          <!-- Icono GitHub -->
-          <IconoView name="GitHub" src="https://img.icons8.com/ios-filled/50/ffffff/github.png" href="https://github.com/FernandoAriel80"/>
-
-          <!-- Icono LinkedIn -->
-          <IconoView name="LinkedIn" src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" href="https://www.linkedin.com/in/fernando-ariel-orellana-601ba7300/"/>
-          
-          <!-- Icono Descargar CV -->
-          <a
-            href="../../public/CV Orellana Fernando Ariel.pdf"
-            download="CV Orellana Fernando Ariel.pdf"
-            class="relative text-gray-300 hover:text-teal-400 transition-colors group"
-          >
-            <img
-              src="https://img.icons8.com/?size=100&id=39372&format=png&color=FFFFFF"
-              alt="Descargar CV"
-              class="w-12 h-12"
-            />
-            <!-- Tooltip -->
-            <span
-              class="absolute bottom-16 left-1/2 transform -translate-x-1/2 text-sm bg-teal-500 text-white py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-            >
-              Curriculum
-            </span>
-          </a>
-        </div>
-        <!-- Correo en texto -->
-
-        <p class="text-lg text-gray-300">
-          Correo:
-          <span class="font-medium text-teal-400" id="correo"
-            >fernando_ariel1995@hotmail.com</span
-          >
-          <!-- Icono de copiar -->
-          <button @click="copyToClipboard" class="ml-2 text-teal-400 hover:text-teal-600">
-            <i class="fas fa-copy text-white w-6 h-6"></i>
-            <!-- Ícono de copiar -->
-          </button>
-        </p>
-
-        <!-- Aviso de éxito al copiar -->
-        <div
-          v-if="copied"
-          class="fixed bottom-4 right-4 bg-teal-500 text-white p-2 rounded shadow"
-        >
-          ¡Correo copiado al portapapeles!
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <FooterView/>
   </div>
 </template>
 
