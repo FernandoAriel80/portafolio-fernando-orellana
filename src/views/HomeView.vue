@@ -3,6 +3,7 @@
 import LayoutView from "@/layout/LayoutView.vue";
 import HabilidadView from "@/components/HabilidadView..vue";
 import ProyectPreView from "@/components/ProyectPreView.vue";
+import inicioImage from '@/assets/images/distribuidora/inicio.png';
 
 const tecnologiesDistributor = [
   {
@@ -90,7 +91,7 @@ const tecnologiesDistributor = [
        
           <!-- Repite más bloques de proyectos como sea necesario -->
           <ProyectPreView 
-            image="/src/assets/images/distribuidora/inicio.png" 
+            :image="inicioImage" 
             name="La Viejita" 
             text="Distribuidora de alimentos, mayorista y minorista, carrito, hacer pedidos. 
             Lado administrativo, carga de productos, empleados, seguimiento de empleados 

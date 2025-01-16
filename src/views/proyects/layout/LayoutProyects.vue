@@ -47,8 +47,7 @@ const toggleMenu = () => {
       v-if="isMenuOpen"
       class="sm:hidden mt-4 flex flex-col items-start space-y-4 text-lg px-6"
     >
-      <a href="#proyectos" class="hover:text-teal-300 transition-colors">Proyectos</a>
-      <a href="#habilidades" class="hover:text-teal-300 transition-colors">Habilidades</a>
+      <RouterLink  class="hover:text-teal-300 transition-colors" to="/">Inicio</RouterLink>
       <a href="#contacto" class="hover:text-teal-300 transition-colors">Contacto</a>
     </nav>
   </header>
