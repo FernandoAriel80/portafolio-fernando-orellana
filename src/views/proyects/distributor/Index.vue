@@ -2,7 +2,7 @@
 import { ref } from "vue";
 import LayoutProyects from "../layout/LayoutProyects.vue";
 import CarouselView from "../components/CarouselView.vue";
-import inicioImage from '@/assets/images/distribuidora/inicio.png';
+import inicioImage from "@/assets/images/distribuidora/inicio.png";
 import productosInicio from "@/assets/images/distribuidora/productos-inicio.png";
 import inicioCategorias from "@/assets/images/distribuidora/inicio-categorias.png";
 import vistaTodosLosProductos from "@/assets/images/distribuidora/vista-todos-los-productos.png";
@@ -13,8 +13,8 @@ import vistaSelector from "@/assets/images/distribuidora/vista-selector.png";
 import vistaPagoPresencial from "@/assets/images/distribuidora/pago-presencial.png";
 import vistaPerfil from "@/assets/images/distribuidora/vista-perfil-datos.png";
 import vistaPerfilPedidos from "@/assets/images/distribuidora/vista-perfil-pedidos.png";
-import vistaPerfilActualizacion from "@/assets/images/distribuidora/vista-perfil-actualizacion.png"
-import vistaPerfilActualizacion2 from "@/assets/images/distribuidora/vista-perfil-actualizacion2.png"
+import vistaPerfilActualizacion from "@/assets/images/distribuidora/vista-perfil-actualizacion.png";
+import vistaPerfilActualizacion2 from "@/assets/images/distribuidora/vista-perfil-actualizacion2.png";
 
 const DistributorCustomerData = [
   {
@@ -69,31 +69,90 @@ const DistributorCustomerData = [
     src: vistaPagoPresencial,
     alt: "Vista pago presencial",
     description:
-      "Vista mas detallada de la compra y los datos del establecimiento, como horarios de atención y dirección del local, y te va a pedir una confirmación de la compra para hacer el pedido."
+      "Vista mas detallada de la compra y los datos del establecimiento, como horarios de atención y dirección del local, y te va a pedir una confirmación de la compra para hacer el pedido.",
   },
   {
     src: vistaPerfil,
     alt: "Vista perfil",
     description:
-      "Al finalizar su compra y hacer el pedido, se redirecciona al perfil del usuario, para poder ver la reserva que se realizo. El perfil dará una vista de tus datos y de los pedidos y el estado de tus pedidos."
+      "Al finalizar su compra y hacer el pedido, se redirecciona al perfil del usuario, para poder ver la reserva que se realizo. El perfil dará una vista de tus datos y de los pedidos y el estado de tus pedidos.",
   },
   {
     src: vistaPerfilPedidos,
     alt: "Vista perfil",
     description:
-      "En el perfil también podrá ver los pedidos realizados y sus detalles en 'ver' podrá una lista de todos los productos del pedido, en 'estado' se vera el estado del pago del producto y en 'estado de entrega' podrás ver el estado de la entrega de tu pedido."
+      "En el perfil también podrá ver los pedidos realizados y sus detalles en 'ver' podrá una lista de todos los productos del pedido, en 'estado' se vera el estado del pago del producto y en 'estado de entrega' podrás ver el estado de la entrega de tu pedido.",
   },
   {
     src: vistaPerfilActualizacion,
     alt: "Vista perfil actualizar",
     description:
-      "En perfil tambien tendra la opcion de que el usuario podra actualizar sus datos personales y la clave. El usuario con rol de admin no podra acceder a estas opciones de actualizacion."
+      "En perfil tambien tendra la opcion de que el usuario podra actualizar sus datos personales y la clave. El usuario con rol de admin no podra acceder a estas opciones de actualizacion.",
   },
   {
     src: vistaPerfilActualizacion2,
     alt: "Vista perfil actualizacion",
+    description: "El usuario demas de actualizar sus datos, podra eliminar su cuenta.",
+  },
+];
+
+import menu from "@/assets/images/distribuidora/menu.png";
+import cargaProductos from "@/assets/images/distribuidora/carga-productos.png";
+import vistaCliente from "@/assets/images/distribuidora/vista-cliente.png";
+import vistaPedido from "@/assets/images/distribuidora/vista-pedidos.png";
+import crearEmpleado from "@/assets/images/distribuidora/crear-empleado.png";
+import vistaAccionesEmpleados from "@/assets/images/distribuidora/vista-acciones-empleado.png";
+import vistaEstadisticas1 from "@/assets/images/distribuidora/vista-estadisticas1.png";
+import vistaEstadisticas2 from "@/assets/images/distribuidora/vista-estadisticas2.png";
+
+const DistributorEmployeeData = [
+  {
+    src: menu,
+    alt: "Vista menu administración",
     description:
-      "El usuario demas de actualizar sus datos, podra eliminar su cuenta."
+      "Al iniciar sesión el administrador ingresa igual que cualquier usuario, pero solo el admin o el super_admin. El rol de admin tiene accesos limitados y el super_admin tiene todo los permisos de acceder a cualquier parte del programa. El menú muestra todo lo que se puede hacer del lado administrativo.",
+  },
+  {
+    src: cargaProductos,
+    alt: "Vista productos",
+    description:
+      "En la opción de Ver Productos, tanto como admin y el super_admin pueden entrar a esta sección, se puede ver los detalles de los productos, se mostraran de a 5 productos y se dividirá en paginas, pero además tiene la opción de Buscar Productos, Cargar Producto, Actualizar Productos y Eliminar Productos.",
+  },
+  {
+    src: vistaCliente,
+    alt: "Vista cliente",
+    description:
+      "La opción de ver cliente, tanto como admin y el super_admin pueden entrar a esta sección, se verán los datos personales de los clientes, si el cliente hizo un registro simple, solo se vera los datos como nombre y correo, pero si quiso hacer una compra de algún producto, deberá llenar datos mas específicos y se verán reflejados en la tabla. Se puede buscar clientes por nombre, apellido y dni.",
+  },
+  {
+    src: vistaPedido,
+    alt: "Vista pedidos",
+    description:
+      "La opción de ver pedidos, tanto como admin y el super_admin pueden entrar a esta sección, podrán ver y buscar pedidos realizados, en la parte de pedidos en 'Ver' se podrá ver la lista de productos de este pedido y también se puede cambiar el estado del pedido ej: 'Entrego', si el pedido fue entregado al cliente o 'Pagado' si se realizo el pago, esta modalidad esa para que los administradores lleven un control manual de los pedidos, pero si el cliente realizo un pedido por mercado pago, el estado de este pedido saldrá como 'Pagado', ya que el cliente realizo un pago online.",
+  },
+  {
+    src: crearEmpleado,
+    alt: "Vista empleados",
+    description:
+      "La opcion de crear empleados, solo puede ser usada por el super_admin, el admin no tiene permiso para eso, en esta parte se puede ver ,buscar, crear, actualizar y eliminar a los empleados.",
+  },
+  {
+    src: vistaAccionesEmpleados,
+    alt: "Vista Acciones",
+    description:
+      "La opcion de vista Acciones, solo puede ser usada por el super_admin, el admin no tiene permiso para eso. En esta parte de puede ver las acciones realizadas por el empleado al memento de administrar un pedido, ej: la empleada mayra cambia el estado de un pedido de 'Pendiente' a 'Pagado', es para tener un seguimiento, corrección de errores y precaución.",
+  },
+  {
+    src: vistaEstadisticas1,
+    alt: "Vista estadisticas",
+    description:
+      "La opción de vista estadísticas, solo puede ser usada por el super_admin, el admin no tiene permiso para eso. Se puede tener un seguimiento de las ganancias mensuales, producto mas vendido del mes actual y el anterior, producto menos vendido de este mes y el anterior.",
+  },
+  {
+    src: vistaEstadisticas2,
+    alt: "Vista estadisticas",
+    description:
+      "También se puede visualizar los productos mas vendidos en todo el año, y de todos los años en total.",
   },
 ];
 </script>
@@ -121,13 +180,13 @@ const DistributorCustomerData = [
           </p>
         </div>
       </div>
-      <div class="max-w-5xl m-4 mx-auto">
+      <div class="max-w-5xl m-7 mx-auto">
         <h1 class="text-3xl font-bold text-teal-400">Vista del cliente</h1>
         <CarouselView :data="DistributorCustomerData" />
       </div>
-      <div class="max-w-5xl m-4 mx-auto">
+      <div class="max-w-5xl m-7 mx-auto">
         <h1 class="text-3xl font-bold text-teal-400">Vista administración</h1>
-        <CarouselView :data="DistributorCustomerData" />
+        <CarouselView :data="DistributorEmployeeData" />
       </div>
     </section>
   </div>
