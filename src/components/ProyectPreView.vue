@@ -24,7 +24,6 @@ const props = defineProps({
       <p class="text-gray-300 text-center px-4">
         {{ props.text }}
       </p>
-      <!-- <a class="mt-4 text-teal-400 hover:text-teal-300 font-medium" :href="props.href">Ver más</a> -->
       <router-link class="mt-4 text-teal-400 hover:text-teal-300 font-medium" :to="props.href" >Ver más</router-link>
     </div>
     <div class="flex justify-between mx-4">

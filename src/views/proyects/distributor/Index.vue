@@ -5,7 +5,16 @@ import CarouselView from "../components/CarouselView.vue";
 import inicioImage from '@/assets/images/distribuidora/inicio.png';
 import productosInicio from "@/assets/images/distribuidora/productos-inicio.png";
 import inicioCategorias from "@/assets/images/distribuidora/inicio-categorias.png";
-import vistaTodosLosProductos from "@/assets/images/distribuidora/vista-todos-los-productos.png"
+import vistaTodosLosProductos from "@/assets/images/distribuidora/vista-todos-los-productos.png";
+import inicioBuscador from "@/assets/images/distribuidora/inicio-buscador.png";
+import inicioMenu from "@/assets/images/distribuidora/inicio-menu.png";
+import vistaCarrito from "@/assets/images/distribuidora/vista-carrito.png";
+import vistaSelector from "@/assets/images/distribuidora/vista-selector.png";
+import vistaPagoPresencial from "@/assets/images/distribuidora/pago-presencial.png";
+import vistaPerfil from "@/assets/images/distribuidora/vista-perfil-datos.png";
+import vistaPerfilPedidos from "@/assets/images/distribuidora/vista-perfil-pedidos.png";
+import vistaPerfilActualizacion from "@/assets/images/distribuidora/vista-perfil-actualizacion.png"
+import vistaPerfilActualizacion2 from "@/assets/images/distribuidora/vista-perfil-actualizacion2.png"
 
 const DistributorCustomerData = [
   {
@@ -31,6 +40,60 @@ const DistributorCustomerData = [
     alt: "Vista todos los productos",
     description:
       "Al seleccionar la opción de Todos los Productos, tendrá una vista de todos los productos cargados de la tienda. Se puede filtrar, por nombre o id del producto, o por las opciones de productos relevante (que serian los recién cargados), mas baratos y mas caros, mostrara hasta 20 productos y tendrá la opción de navegar entre paginas sin perder el estado de los filtro.",
+  },
+  {
+    src: inicioBuscador,
+    alt: "Vista pantalla inicial",
+    description:
+      "Buscar producto por nombre y al seleccionar el producto te da una vista mas detallada del producto.",
+  },
+  {
+    src: inicioMenu,
+    alt: "Vista pantalla inicial",
+    description:
+      "Al apretar perfil se abre un menú para poder acceder al perfil y cerrar sesión si tienes rol de cliente, si tienes rol de admin o super_admin, solo ellos van a poder ver la opción de administración.",
+  },
+  {
+    src: vistaCarrito,
+    alt: "Vista carrito",
+    description:
+      "Si en el usuario tiene productos en su carrito podrá ver el gasto total de todos estos, podrá agregar, restar y eliminar productos del carrito.",
+  },
+  {
+    src: vistaSelector,
+    alt: "Vista selección de medio de pago",
+    description:
+      "Para finalizar la compra y antes de esta pantalla, si no esta registrado, le va a pedir que ingrese datos personales mas importantes ej: numero de celular, dirección y DNI. Si el usuario tiene rol de admin no podrá acceder a este sección. La vista es un menú para seleccionar un medio de pago ya sea por mercado pago o presencial, en la vista de mercado pago se abre un model y pasos a seguir propio de mercado pago para realizar la compra de o los productos.",
+  },
+  {
+    src: vistaPagoPresencial,
+    alt: "Vista pago presencial",
+    description:
+      "Vista mas detallada de la compra y los datos del establecimiento, como horarios de atención y dirección del local, y te va a pedir una confirmación de la compra para hacer el pedido."
+  },
+  {
+    src: vistaPerfil,
+    alt: "Vista perfil",
+    description:
+      "Al finalizar su compra y hacer el pedido, se redirecciona al perfil del usuario, para poder ver la reserva que se realizo. El perfil dará una vista de tus datos y de los pedidos y el estado de tus pedidos."
+  },
+  {
+    src: vistaPerfilPedidos,
+    alt: "Vista perfil",
+    description:
+      "En el perfil también podrá ver los pedidos realizados y sus detalles en 'ver' podrá una lista de todos los productos del pedido, en 'estado' se vera el estado del pago del producto y en 'estado de entrega' podrás ver el estado de la entrega de tu pedido."
+  },
+  {
+    src: vistaPerfilActualizacion,
+    alt: "Vista perfil actualizar",
+    description:
+      "En perfil tambien tendra la opcion de que el usuario podra actualizar sus datos personales y la clave. El usuario con rol de admin no podra acceder a estas opciones de actualizacion."
+  },
+  {
+    src: vistaPerfilActualizacion2,
+    alt: "Vista perfil actualizacion",
+    description:
+      "El usuario demas de actualizar sus datos, podra eliminar su cuenta."
   },
 ];
 </script>
@@ -58,8 +121,12 @@ const DistributorCustomerData = [
           </p>
         </div>
       </div>
-      <div class="max-w-5xl mx-auto">
+      <div class="max-w-5xl m-4 mx-auto">
         <h1 class="text-3xl font-bold text-teal-400">Vista del cliente</h1>
+        <CarouselView :data="DistributorCustomerData" />
+      </div>
+      <div class="max-w-5xl m-4 mx-auto">
+        <h1 class="text-3xl font-bold text-teal-400">Vista administración</h1>
         <CarouselView :data="DistributorCustomerData" />
       </div>
     </section>
