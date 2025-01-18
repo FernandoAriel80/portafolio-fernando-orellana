@@ -140,7 +140,7 @@ const DistributorEmployeeData = [
     src: vistaAccionesEmpleados,
     alt: "Vista Acciones",
     description:
-      "La opcion de vista Acciones, solo puede ser usada por el super_admin, el admin no tiene permiso para eso. En esta parte de puede ver las acciones realizadas por el empleado al memento de administrar un pedido, ej: la empleada mayra cambia el estado de un pedido de 'Pendiente' a 'Pagado', es para tener un seguimiento, corrección de errores y precaución.",
+      "La opcion de vista  Acciones, solo puede ser usada por el super_admin, el admin no tiene permiso para eso. En esta parte de puede ver las acciones realizadas por el empleado al memento de administrar un pedido, ej: la empleada mayra cambia el estado de un pedido de 'Pendiente' a 'Pagado', es para tener un seguimiento, corrección de errores y precaución.",
   },
   {
     src: vistaEstadisticas1,
