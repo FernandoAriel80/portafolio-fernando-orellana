@@ -5,7 +5,7 @@ import SimsDiary from '../views/proyects/simsDiary/Index.vue';
 import Workshop from '../views/proyects/workshop/Index.vue';
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(),
   routes: [
     {
       path: '/',
@@ -27,8 +27,15 @@ const router = createRouter({
       name: 'proyect-workshop',
       component: Workshop,
     },
-
   ],
-})
+  scrollBehavior(to, from, savedPosition) {
+    // Verifica si hay una posición guardada (al navegar hacia atrás/adelante)
+    if (savedPosition) {
+      return savedPosition; // Mantiene la posición guardada
+    }
+    // Si no, desplázate al principio de la página
+    return { top: 0 };
+  },
+});
 
 export default router
