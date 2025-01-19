@@ -15,49 +15,49 @@ const DiaryCustomerData = [
     src: inicioImage,
     alt: "Vista pantalla inicial",
     description:
-      "En la vista inicial, tenemos la bienvenida a la pagina, también se puede acceder a ver todos los días, pero si queremos entrar al perfil tenemos que estar registrados y logiados. En la seccion izquierda estan las opciones para ingresar o registrarse como usuario.",
+      "En la vista inicial, tenemos la bienvenida a la pagina, también se puede acceder a ver todos los diarios, pero para entrar al perfil tenemos que estar registrados y con la sesión iniciada. En la sección izquierda están las opciones para ingresar o registrarse como usuario.",
   },
   {
     src: todosDiarios,
     alt: "Vista todos los diarios",
     description:
-      "Se puede los diarios de todos los usuarios en orden de publicación o actualización, podes agregar tu historia favorita desde la estrella.",
+      "Se puede ver los diarios de todos los usuarios en orden de publicación o actualización, se puede agregar a favoritos la historia presionando la estrella.",
   },
   {
     src: vistaDiarioA,
     alt: "Vista del diario usuario A",
     description:
-      "En la vista del diario, el usuario que creo el diario, puede editar y eliminar el diario, también se puede agregar un capitulo, editar y eliminarlo.",
+      "En la vista del diario, el usuario que creo el diario, puede editar y eliminarlo, también se puede agregar un capitulo, editar y eliminarlo.",
   },
   {
     src: vistaDiarioB,
     alt: "Vista del diario usuario B",
     description:
-      "Cuando otro usuario ve el diario, calificarlo y agregarlo como favorito.",
+      "Cuando otro usuario ve el diario, puede calificarlo y agregarlo como favorito.",
   }, 
   {
     src: vistaDiarioC,
     alt: "Vista del diario usuario C",
     description:
-      "Esta seria la vista de un diario con imagen.",
+      "Esta seria la vista de un capitulo con una imagen.",
   },
   {
     src: filtro,
     alt: "Vista todos los diarios",
     description:
-      "Los diarios se pueden filtrar, por genero, ordenar por fecha de actualización, creación y por puntos, por ascendente y descenderte, y por nombre por nombre.",
+      "Los diarios se pueden filtrar, por genero, ordenar por fecha de actualización, creación y por puntos, también por ascendente y descenderte, y buscar por nombre.",
   },
   {
     src: perfil,
     alt: "Vista del perfil",
     description:
-      "En el perfil el usuario puede ver sus diarios y los que agrego como favorito, también se puede crear un diario y aditar el perfil.",
+      "En el perfil, el usuario puede ver sus diarios y los que agrego como favorito, también puede crear un diario y editar el perfil.",
   },
   {
     src: cargarDiario,
     alt: "Vista de carga de diario",
     description:
-      "Para crear un diario, se tiene que cargar el titulo y una descripción de lo que se va a tratar el diario y también que agregar los géneros. Los diarios van creados con una primera entrada (ósea un capitulo), el capitulo tiene que tener un titulo y la historia del primer capitulo, se puede agregar una imagen o no. Antes de crear el diario puede dejarlo como visible o privado, si es privado los demás usuarios no pueden verlo.",
+      "Para crear un diario, tiene que ingresar el titulo y descripción de lo que se va a tratar el diario y puede agregar géneros. Los diarios van creados con una primera entrada (ósea un capitulo), el capitulo tiene que tener un titulo y la historia del primer capitulo, se puede agregar una imagen o no. Antes de crear el diario, tiene la opción de visible o privado con un check, esta en publico por defecto, si es privado los demás usuarios no pueden verlo.",
   },
 ];
 </script>
@@ -66,11 +66,11 @@ const DiaryCustomerData = [
     <LayoutProyects />
     <section class="py-20">
       <div class="max-w-4xl mx-auto">
-        <h2 class="text-4xl font-bold text-teal-400 mb-6">Diario los Fans Sims</h2>
+        <h2 class="text-4xl font-bold text-teal-400 mb-6">Recreación web oficial de los sims</h2>
         <div class="text-lg text-gray-300 leading-relaxed mb-10">
           <p>
             Proyecto personal que trata de recrear la sección de historias en el sitio
-            oficial de Los Sims donde los usuarios podían registrarse para crear y leer
+            oficial de Los Sims del año 2004, donde los usuarios podían registrarse para crear y leer
             historias, agregarlas a favoritos para seguir sus actualizaciones y
             puntuarlas.
           </p>

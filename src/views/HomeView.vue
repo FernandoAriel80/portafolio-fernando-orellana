@@ -4,6 +4,7 @@ import HabilidadView from "@/components/HabilidadView..vue";
 import ProyectPreView from "@/components/ProyectPreView.vue";
 import inicioSimsDiary from "@/assets/images/sims-page/inicio.png";
 import inicioDistribuitor from "@/assets/images/distribuidora/inicio.png";
+import inicioWorkshop from "@/assets/images/taller/indice.png"
 
 const tecnologiesSimsDiary = [
   {
@@ -43,6 +44,13 @@ const tecnologiesDistributor = [
   {
     name: "MySql",
     src: "https://img.icons8.com/?size=100&id=39855&format=png&color=FFFFFF",
+  },
+];
+
+const tecnologiesWorkshop = [
+  {
+    name: "HTML",
+    src: "https://img.icons8.com/ios/50/ffffff/html-5--v1.png",
   },
 ];
 
@@ -134,8 +142,8 @@ const tecnologiesDistributor = [
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
           <ProyectPreView
             :image="inicioSimsDiary"
-            name="Diario los Fans Sims"
-            text="Diario online, usuarios pueden crear sus diarios, ver el de los demás, ponerle puntuación y agregarlo entre sus diarios favoritos."
+            name="Recreación web oficial de los sims"
+            text="Sitio web para publicar y leer historias, usuarios pueden crear sus historias, ver el de los demás, ponerle puntuación y agregarlo entre sus diarios favoritos."
             href="/proyecto-diario-sims"
             :technologies="tecnologiesSimsDiary"
           />
@@ -147,6 +155,13 @@ const tecnologiesDistributor = [
             y estadística mensual."
             href="/proyecto-destribuidora"
             :technologies="tecnologiesDistributor"
+          />
+          <ProyectPreView
+            :image="inicioWorkshop"
+            name="A&M Service"
+            text=""
+            href="/proyecto-taller"
+            :technologies="tecnologiesWorkshop"
           />
         </div>
 
