@@ -67,7 +67,7 @@ const DiaryCustomerData = [
     <section class="py-20">
       <div class="max-w-4xl mx-auto">
         <h2 class="text-4xl font-bold text-teal-400 mb-6">Recreación web oficial de los sims</h2>
-        <div class="text-lg text-gray-300 leading-relaxed mb-10">
+        <div class="text-lg text-gray-300 leading-relaxed mb-10 mx-3">
           <p>
             Proyecto personal que trata de recrear la sección de historias en el sitio
             oficial de Los Sims del año 2004, donde los usuarios podían registrarse para crear y leer
