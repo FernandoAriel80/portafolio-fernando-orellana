@@ -4,7 +4,7 @@ import HabilidadView from "@/components/HabilidadView..vue";
 import ProyectPreView from "@/components/ProyectPreView.vue";
 import inicioSimsDiary from "@/assets/images/sims-page/inicio.png";
 import inicioDistribuitor from "@/assets/images/distribuidora/inicio.png";
-import inicioWorkshop from "@/assets/images/taller/indice.png"
+import inicioWorkshop from "@/assets/images/taller/indice.png";
 
 const tecnologiesSimsDiary = [
   {
@@ -52,15 +52,24 @@ const tecnologiesWorkshop = [
     name: "HTML",
     src: "https://img.icons8.com/ios/50/ffffff/html-5--v1.png",
   },
+  {
+    name: "Tailwind",
+    src: "https://img.icons8.com/?size=100&id=qOFWMoaAQIdR&format=png&color=FFFFFF",
+  },
+  {
+    name: "Laravel",
+    src: "https://img.icons8.com/ios/50/ffffff/laravel.png",
+  },
+  {
+    name: "MySql",
+    src: "https://img.icons8.com/?size=100&id=39855&format=png&color=FFFFFF",
+  },
 ];
-
 </script>
 
 <template>
   <div class="bg-gray-900 text-white min-h-screen">
-    <!-- Cabecera -->
     <LayoutView />
-    <!-- Sección Principal -->
     <section class="py-20 text-center">
       <div class="max-w-2xl mx-auto">
         <h2 class="text-5xl font-extrabold text-teal-400 mb-4">¡Hola! Soy Fernando</h2>
@@ -78,7 +87,6 @@ const tecnologiesWorkshop = [
       </div>
     </section>
 
-    <!-- Sección de Habilidades -->
     <section id="habilidades" class="py-16 bg-gray-800">
       <div class="max-w-7xl mx-auto text-center">
         <h2 class="text-3xl font-bold text-teal-400 mb-12">Habilidades</h2>
@@ -135,7 +143,6 @@ const tecnologiesWorkshop = [
       </div>
     </section>
 
-    <!-- Sección de Proyectos -->
     <section id="proyectos" class="py-20">
       <div class="max-w-7xl mx-auto text-center">
         <h2 class="text-3xl font-bold text-teal-400 mb-12">Proyectos Destacados</h2>
@@ -159,7 +166,7 @@ const tecnologiesWorkshop = [
           <ProyectPreView
             :image="inicioWorkshop"
             name="A&M Service"
-            text=""
+            text="Plataforma Digital de Gestión Automotriz, servicios de mantenimiento, reparación y seguimiento del vehículo, gestión de turnos para revisión."
             href="/proyecto-taller"
             :technologies="tecnologiesWorkshop"
           />
@@ -179,7 +186,6 @@ const tecnologiesWorkshop = [
 </template>
 
 <style scoped>
-/* Asegúrate de que el ícono sea visible y esté centrado */
 .fas {
   font-size: 1.25rem;
 }

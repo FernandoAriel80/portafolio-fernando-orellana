@@ -1,5 +1,4 @@
 <script setup>
-import { ref } from "vue";
 import LayoutProyects from "../layout/LayoutProyects.vue";
 import CarouselView from "../components/CarouselView.vue";
 import inicioImage from "@/assets/images/distribuidora/inicio.png";
@@ -163,7 +162,7 @@ const DistributorEmployeeData = [
     <section class="py-20">
       <div class="max-w-4xl mx-auto">
         <h2 class="text-4xl font-bold text-teal-400 mb-6">La viejita</h2>
-        <div class="text-lg text-gray-300 leading-relaxed mb-10">
+        <div class="text-lg text-gray-300 leading-relaxed mb-10 mx-3">
           <p>
             Es un proyecto que realicé como Trabajo Final para mi Tecnicatura
             Universitaria en Programación. Consiste en un E-commerce para una
