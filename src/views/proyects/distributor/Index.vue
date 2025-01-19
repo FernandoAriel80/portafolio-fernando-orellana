@@ -161,7 +161,7 @@ const DistributorEmployeeData = [
   <div class="bg-gray-900 text-white min-h-screen">
     <LayoutProyects />
     <section class="py-20">
-      <div class="max-w-4xl mx-auto text-center">
+      <div class="max-w-4xl mx-auto">
         <h2 class="text-4xl font-bold text-teal-400 mb-6">La viejita</h2>
         <div class="text-lg text-gray-300 leading-relaxed mb-10">
           <p>
@@ -175,9 +175,22 @@ const DistributorEmployeeData = [
             vendido en el mes y productos más o menos vendidos.
           </p>
           <p>
-            Desarrollado con Vue 3 para el frontend, Tailwind para el diseño y un API REST
-            en Laravel 11 para el backend.
+            Desarrollado con Vue 3 para el frontend, Tailwind para los estilos, un API
+            REST en Laravel 11 para el backend y MySql para la base de datos. Para el
+            despliege, use plataformas PaaS, como Railway para el Backend y Render para el
+            Frontend.
           </p>
+          <div class="mt-5 border-t ">
+            <p>Si quieres ver los repositorios del proyecto:</p>
+            <p>
+              Backend:
+              <a class="hover:text-teal-400" href="https://github.com/FernandoAriel80/distribuidora-back">Acá</a>
+            </p>
+            <p>
+              Frontend:
+              <a class="hover:text-teal-400" href="https://github.com/FernandoAriel80/distribuidora-front">Acá</a>
+            </p>
+          </div>
         </div>
       </div>
       <div class="max-w-5xl m-7 mx-auto">
