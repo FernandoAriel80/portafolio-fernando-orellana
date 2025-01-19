@@ -90,6 +90,12 @@ const copyToClipboard = () => {
       </div>
     </div>
   </section>
+  <a
+    href="#top"
+    class="fixed bottom-20 right-8 bg-teal-500 hover:bg-teal-400 text-black p-3  rounded-full shadow-lg"
+  >
+  <img class=" w-4 h-4" src="https://img.icons8.com/?size=100&id=100000&format=png&color=1A1A1A" alt="arraw">
+  </a>
   <footer class="bg-gray-800 py-8">
     <div class="max-w-7xl mx-auto text-center text-gray-400">
       <p>&copy; 2025 Fernando Orellana. Todos los derechos reservados.</p>
