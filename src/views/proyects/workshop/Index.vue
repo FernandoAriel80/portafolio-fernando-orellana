@@ -11,8 +11,6 @@ import cargaVehiculo1 from "@/assets/images/taller/carga-vehiculo1.png";
 import cargaReserva from "@/assets/images/taller/carga-reserva.png";
 import cargaReserva1 from "@/assets/images/taller/carga-reserva1.png";
 
-
-
 const workshopCustomerData = [
   {
     src: inicioImage,
@@ -23,14 +21,12 @@ const workshopCustomerData = [
   {
     src: inicioImage1,
     alt: "Vista pantalla inicial",
-    description:
-      "Descripción del taller.",
+    description: "Descripción del taller.",
   },
   {
     src: inicioImage2,
     alt: "Vista pantalla inicial",
-    description:
-      "Sección de los servicios que realiza el taller.",
+    description: "Sección de los servicios que realiza el taller.",
   },
   {
     src: inicioImage3,
@@ -41,8 +37,7 @@ const workshopCustomerData = [
   {
     src: inicioImage4,
     alt: "Vista pantalla inicial",
-    description:
-      "Vista de usuario con la sesión iniciada.",
+    description: "Vista de usuario con la sesión iniciada.",
   },
   {
     src: cargaVehiculo,
@@ -60,7 +55,7 @@ const workshopCustomerData = [
     src: cargaReserva,
     alt: "Vista reserva/datos reserva",
     description:
-      "Una vez seleccionado un vehículo, el usuario tiene que elegir el día de la cita y dar una breve descripción de para que quiere hacer la cita.",
+      "Una vez seleccionado un vehículo, el usuario tiene que elegir el día de la cita y dar una breve descripción del motivo por el cual la solicita.",
   },
   {
     src: cargaReserva1,
@@ -78,19 +73,19 @@ const workshopCustomerData = [
         <h2 class="text-4xl font-bold text-teal-400 mb-6">A&M Service</h2>
         <div class="text-lg text-gray-300 leading-relaxed mb-10 mx-3">
           <p>
-            Proyecto personal de una plataforma de Gestión Automotriz, muestra los
+            Proyecto personal de una plataforma de Gestión Automotriz. Muestra los
             servicios que realiza el taller, con manejo de usuarios, con registro, perfil
-            y lado administrativo para manejo de reservas o citas(la administración aun no
-            implementada), el usuario puede reservar una cita para revisión del vehículo y
-            tener seguimiento del vehículo, por estados, notificaciones personal y por
-            correo (el seguimiento aun no esta implementado).
+            y lado administrativo para manejo de reservas o citas (la administración aún
+            no implementada), el usuario puede reservar una cita para revisión del
+            vehículo y tener seguimiento del mismo, por estados, notificaciones personales
+            y por correo (el seguimiento aún no está implementado).
           </p>
           <p>
-            El desarrollo tiene un enfoque general, ósea que sirva para distintos talleres
-            con los servicios que implemente, ya sea de autos o motos. Esta desarrollada en
-            Laravel implementado Breeze para manejo de iniciado de sesión, registro y
-            perfil, Tailwind para los estilos y MySql para la base de datos. El proyecto aun esta en
-            desarrollo.
+            El desarrollo tiene un enfoque general, o sea que sirva para distintos
+            talleres con los servicios que implemente, ya sea de autos o motos. Está
+            desarrollada en Laravel implementando Breeze para manejo de inicio de sesión,
+            registro y perfil, Tailwind para los estilos y MySql para la base de datos. El
+            proyecto aún está en desarrollo.
           </p>
           <div class="mt-5 border-t">
             <p>

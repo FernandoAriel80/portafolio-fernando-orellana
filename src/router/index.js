@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue';
 import DistributorView from '../views/proyects/distributor/Index.vue';
 import SimsDiary from '../views/proyects/simsDiary/Index.vue';
 import Workshop from '../views/proyects/workshop/Index.vue';
+import Proyects from '../views/proyects/ProyectsView.vue';
 
 const router = createRouter({
   history: createWebHistory(),
@@ -11,6 +12,11 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: HomeView,
+    },
+    {
+      path: '/proyectos',
+      name: 'proyects',
+      component: Proyects,
     },
     {
       path: '/proyecto-destribuidora',

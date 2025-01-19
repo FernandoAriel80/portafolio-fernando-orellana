@@ -148,33 +148,31 @@ const tecnologiesWorkshop = [
         <h2 class="text-3xl font-bold text-teal-400 mb-12">Proyectos Destacados</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
           <ProyectPreView
-            :image="inicioSimsDiary"
-            name="Recreación web oficial de los sims"
-            text="Sitio web para publicar y leer historias, usuarios pueden crear sus historias, ver el de los demás, ponerle puntuación y agregarlo entre sus diarios favoritos."
-            href="/proyecto-diario-sims"
-            :technologies="tecnologiesSimsDiary"
-          />
-          <ProyectPreView
             :image="inicioDistribuitor"
             name="La Viejita"
-            text="Distribuidora de alimentos, mayorista y minorista, carrito, hacer pedidos. 
-            Lado administrativo, carga de productos, empleados, seguimiento de empleados 
-            y estadística mensual."
+            text="Distribuidora de alimentos con carrito y estadísticas."
             href="/proyecto-destribuidora"
             :technologies="tecnologiesDistributor"
           />
           <ProyectPreView
             :image="inicioWorkshop"
             name="A&M Service"
-            text="Plataforma Digital de Gestión Automotriz, servicios de mantenimiento, reparación y seguimiento del vehículo, gestión de turnos para revisión."
+            text="Gestión automotriz con turnos y seguimiento de vehículos."
             href="/proyecto-taller"
             :technologies="tecnologiesWorkshop"
+          />
+          <ProyectPreView
+            :image="inicioSimsDiary"
+            name="Recreación web oficial de Los Sims"
+            text="Publicar y leer historias, puntuación, favoritos."
+            href="/proyecto-diario-sims"
+            :technologies="tecnologiesSimsDiary"
           />
         </div>
 
         <div class="mt-12">
           <a
-            href="#todos-proyectos"
+            href="/proyectos"
             class="inline-block px-6 py-3 text-lg font-medium text-teal-400 border border-teal-400 rounded-lg hover:bg-teal-400 hover:text-gray-900 transition-colors"
           >
             Ver todos los proyectos

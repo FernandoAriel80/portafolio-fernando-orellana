@@ -15,7 +15,7 @@ const DiaryCustomerData = [
     src: inicioImage,
     alt: "Vista pantalla inicial",
     description:
-      "En la vista inicial, tenemos la bienvenida a la pagina, también se puede acceder a ver todos los diarios, pero para entrar al perfil tenemos que estar registrados y con la sesión iniciada. En la sección izquierda están las opciones para ingresar o registrarse como usuario.",
+      "Vista bienvenida.",
   },
   {
     src: todosDiarios,
@@ -27,7 +27,7 @@ const DiaryCustomerData = [
     src: vistaDiarioA,
     alt: "Vista del diario usuario A",
     description:
-      "En la vista del diario, el usuario que creo el diario, puede editar y eliminarlo, también se puede agregar un capitulo, editar y eliminarlo.",
+      "Usuarios pueden editar y eliminar sus diarios.",
   },
   {
     src: vistaDiarioB,
@@ -39,7 +39,7 @@ const DiaryCustomerData = [
     src: vistaDiarioC,
     alt: "Vista del diario usuario C",
     description:
-      "Esta seria la vista de un capitulo con una imagen.",
+      "Vista de un capitulo con una imagen.",
   },
   {
     src: filtro,
@@ -57,7 +57,7 @@ const DiaryCustomerData = [
     src: cargarDiario,
     alt: "Vista de carga de diario",
     description:
-      "Para crear un diario, tiene que ingresar el titulo y descripción de lo que se va a tratar el diario y puede agregar géneros. Los diarios van creados con una primera entrada (ósea un capitulo), el capitulo tiene que tener un titulo y la historia del primer capitulo, se puede agregar una imagen o no. Antes de crear el diario, tiene la opción de visible o privado con un check, esta en publico por defecto, si es privado los demás usuarios no pueden verlo.",
+      "Crear un diario, es necesario crear un primer capitulo, es opcional agregar imagen, puede dejarlo privado o visible al público.",
   },
 ];
 </script>
