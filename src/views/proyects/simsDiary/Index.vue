@@ -45,7 +45,7 @@ const DiaryCustomerData = [
     src: filtro,
     alt: "Vista todos los diarios",
     description:
-      "Los diarios se pueden filtrar, por genero, ordenar por fecha de actualización, creación y por puntos, también por ascendente y descenderte, y buscar por nombre.",
+      "Los diarios se pueden filtrar por genero, ordenar por fecha de actualización, creación, puntaje y buscar por titulo.",
   },
   {
     src: perfil,
