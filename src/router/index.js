@@ -21,6 +21,10 @@ const router = createRouter({
       name: 'proyect-sims-diary',
       component: SimsDiary,
     },
+    { 
+      path: '/:catchAll(.*)', // Redirige rutas no encontradas a Home
+      redirect: '/' 
+    },
 
   ],
 })
