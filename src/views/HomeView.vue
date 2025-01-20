@@ -1,70 +1,11 @@
 <script setup>
 import LayoutView from "@/layout/LayoutView.vue";
 import HabilidadView from "@/components/HabilidadView..vue";
-import ProyectPreView from "@/components/ProyectPreView.vue";
-import inicioSimsDiary from "@/assets/images/sims-page/inicio.png";
-import inicioDistribuitor from "@/assets/images/distribuidora/inicio.png";
-import inicioWorkshop from "@/assets/images/taller/indice.png";
+import WorkshopPreView from "./preViews/WorkshopPreView.vue";
+import DistribuitorPreView from "./preViews/DistribuitorPreView.vue";
+import FansSimsPreView from "./preViews/FansSimsPreView.vue";
 
-const tecnologiesSimsDiary = [
-  {
-    name: "HTML",
-    src: "https://img.icons8.com/ios/50/ffffff/html-5--v1.png",
-  },
-  {
-    name: "CSS",
-    src: "https://img.icons8.com/ios/50/ffffff/css3.png",
-  },
-  {
-    name: "PHP",
-    src: "https://img.icons8.com/?size=100&id=39852&format=png&color=FFFFFF",
-  },
-  {
-    name: "MySql",
-    src: "https://img.icons8.com/?size=100&id=39855&format=png&color=FFFFFF",
-  },
-];
-const tecnologiesDistributor = [
-  {
-    name: "HTML",
-    src: "https://img.icons8.com/ios/50/ffffff/html-5--v1.png",
-  },
-  {
-    name: "Tailwind",
-    src: "https://img.icons8.com/?size=100&id=qOFWMoaAQIdR&format=png&color=FFFFFF",
-  },
-  {
-    name: "Vue.js",
-    src: "https://img.icons8.com/ios/50/ffffff/vuejs.png",
-  },
-  {
-    name: "Laravel",
-    src: "https://img.icons8.com/ios/50/ffffff/laravel.png",
-  },
-  {
-    name: "MySql",
-    src: "https://img.icons8.com/?size=100&id=39855&format=png&color=FFFFFF",
-  },
-];
 
-const tecnologiesWorkshop = [
-  {
-    name: "HTML",
-    src: "https://img.icons8.com/ios/50/ffffff/html-5--v1.png",
-  },
-  {
-    name: "Tailwind",
-    src: "https://img.icons8.com/?size=100&id=qOFWMoaAQIdR&format=png&color=FFFFFF",
-  },
-  {
-    name: "Laravel",
-    src: "https://img.icons8.com/ios/50/ffffff/laravel.png",
-  },
-  {
-    name: "MySql",
-    src: "https://img.icons8.com/?size=100&id=39855&format=png&color=FFFFFF",
-  },
-];
 </script>
 
 <template>
@@ -147,36 +88,19 @@ const tecnologiesWorkshop = [
       <div class="max-w-7xl mx-auto text-center">
         <h2 class="text-3xl font-bold text-teal-400 mb-12">Proyectos Destacados</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
-          <ProyectPreView
-            :image="inicioDistribuitor"
-            name="La Viejita"
-            text="Distribuidora de alimentos con carrito y estadísticas."
-            href="/proyecto-destribuidora"
-            :technologies="tecnologiesDistributor"
-          />
-          <ProyectPreView
-            :image="inicioWorkshop"
-            name="A&M Service"
-            text="Gestión automotriz con turnos y seguimiento de vehículos."
-            href="/proyecto-taller"
-            :technologies="tecnologiesWorkshop"
-          />
-          <ProyectPreView
-            :image="inicioSimsDiary"
-            name="Recreación web oficial de Los Sims"
-            text="Publicar y leer historias, puntuación, favoritos."
-            href="/proyecto-diario-sims"
-            :technologies="tecnologiesSimsDiary"
-          />
+          <!-- proyectos -->
+          <DistribuitorPreView/>
+          <WorkshopPreView/>
+          <FansSimsPreView/>         
         </div>
 
         <div class="mt-12">
-          <a
-            href="/proyectos"
+          <router-link
+            to="/proyectos"
             class="inline-block px-6 py-3 text-lg font-medium text-teal-400 border border-teal-400 rounded-lg hover:bg-teal-400 hover:text-gray-900 transition-colors"
           >
-            Ver todos los proyectos
-          </a>
+            Ver todos los proyectos</router-link
+          >
         </div>
       </div>
     </section>
