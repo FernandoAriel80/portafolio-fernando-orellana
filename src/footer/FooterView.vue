@@ -72,7 +72,7 @@ const copyToClipboard = () => {
       <p class="text-lg text-gray-300">
         Correo:
         <span class="font-medium text-teal-400" id="correo"
-          >fernando_ariel1995@hotmail.com</span
+          >orellana.dev@gmail.com</span
         >
         <!-- Icono de copiar -->
         <button @click="copyToClipboard" class="ml-2 text-teal-400 hover:text-teal-600">
