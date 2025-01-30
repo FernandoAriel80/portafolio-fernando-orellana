@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue';
 import DistributorView from '../views/proyects/distributor/Index.vue';
 import SimsDiary from '../views/proyects/simsDiary/Index.vue';
 import Workshop from '../views/proyects/workshop/Index.vue';
+import apiSkeleton from '../views/proyects/apiSkeleton/Index.vue';
 import Proyects from '../views/proyects/ProyectsView.vue';
 
 const router = createRouter({
@@ -32,6 +33,11 @@ const router = createRouter({
       path: '/proyecto-taller',
       name: 'proyect-workshop',
       component: Workshop,
+    },
+    {
+      path: '/proyecto-esqueleto-api',
+      name: 'proyect-api-skeleton',
+      component: apiSkeleton,
     },
   ],
   scrollBehavior(to, from, savedPosition) {
