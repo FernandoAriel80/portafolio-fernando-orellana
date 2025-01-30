@@ -50,8 +50,8 @@ const copyToClipboard = () => {
 
         <!-- Icono Descargar CV -->
         <a
-          href="../../public/CV Orellana Fernando.pdf"
-          download="CV Orellana Fernando.pdf"
+          href="../../public/CV Orellana Fernando Ariel.pdf"
+          download="CV Orellana Fernando Ariel.pdf"
           class="relative text-gray-300 hover:text-teal-400 transition-colors group"
         >
           <img
